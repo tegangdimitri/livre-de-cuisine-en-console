@@ -1,9 +1,8 @@
 #include<iostream>
 #include <fstream>
-enum  ChoixMenu {
-    ajouter = 'a',
-    rechercher = 'r',
-    modifier = 'm',
-    suprimer = 's'
-};
-void menu () ;
+#include "donnee.h"
+
+void menu ();
+void ajouter(recettes Recettes);
+void rechercher_ingredients();
+void rechercher_nom();
