@@ -1,7 +1,7 @@
+Recette :
+ tomate/ Ingredients : jus, leau, / Etapes : 1) melange,Recette :
+ avocat/ Ingredients : bon, jour, / Etapes : 1) lave,2) preparer,Recette :
+tomate/ Ingredients : riz, sauce, / Etapes : 1) melange,
+Recette :
 tomate
-
-1
-5
-6
-5
-f
+/ Ingredients : au, jour, hui, / Etapes : 1) lave,2) melange,
