@@ -1,7 +1,144 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
-#include "donnee.h"
+#include "declaration.h"
+#include <string>
+#ifndef __header_H__
+#define __header_H__ 
+
+void import_recette_a_file(struct Recettes recette[100],int i){
+
+	const std::string fileName = "data.txt";
+	std::ofstream file;
+	
+	file.open(fileName, std::ios::app);//ouvir le fichier en ;ode append
+	
+	file<<"{"<<"\n";
+	file<<"Titre"<<recette[i].nom<<"\n";
+	file<<"vous avez besion de "<<recette[i].nbri;
+	file<<"Ingredients";//recette[i].nbri 
+    for (int j=0 ; j< recette[i].nbri; j++){
+        file<<recette[i].ingredient[j]<<"," ;
+        }
+	file<<"suiver les "<<recette[i].nbre<<"etape suivants";	
+	file<<"Etapes"<<"\n";
+
+    for (int j= 0 ; j <recette[i].nbre ; j++){            
+    file<<recette[i].etape[j] ;
+    } 	 
+}
+
+void ajouter_recette(struct Recettes recette[100],int i)
+{
+	cout <<"Entrer le nom de la recette \n ";
+    cin >> recette[i].nom ;
+    cout <<"Entrer le nombre dingredient\n";
+    cin >> recette[i].nbri ;
+    for (int j=0 ; j<(recette[i].nbri); j++){
+        cout << "Entrer le nom de  ingriedients"<< j+1 <<" \n";
+        cin >> recette[i].ingredient[j] ;
+        }
+    cout <<" \n entrer le nombre d'etapes\n";
+     
+    cin >> recette[i].nbre;
+    for (int j= 0 ; j <(recette[i].nbre) ; j++){            
+	cout << "entrer l'etape  "<< j+1 <<" \n";
+    cin >> recette[i].etape[j] ;
+    import_recette_a_file(recette,i);
+    }
+}
+
+void rechercher_par_ind(struct Recettes recette[100],int i,char m[100]){
+	int j,k;
+	
+	for(j=0;j<i;j++){
+		for(k=0; k<(recette[j].nbri) ;k++){
+			if(true)//strcmp(recette[j].ingredient[k],m)==1)
+			{
+                cout<<"Titre :"<<recette[j].nom ;
+                cout<<"No ingredients :"<<recette[j].nbri ;
+				cout<<"les ingredients\n";
+                for (int n=0 ; n<(recette[i].nbri); n++){
+                cout<<recette[j].ingredient[n] ;
+				}    
+                cout<<"Etapes\n";
+                for (int n= 0 ; n<(recette[i].nbre) ; n++){            
+	            cout<<"Etape "<<+1<<"\n"<<recette[j].etape[n] ;
+               }
+		    }
+		}
+	}
+
+
+
+}
+
+void modifier_recette(struct Recettes recette[100]){
+	int option;
+	int i;
+    std::cin>>option;
+	std::cout<<"Entre Id de lq recette ";
+	std::cin>>i;
+	if(option==1){//le titre
+
+		std::cout<<"Enter le nouveau titre :";
+		cin>>recette[i].nom;
+
+		std::cout<<"titre modifier \n";
+	}
+
+	else if(option==2){// les ingredients
+	 cout <<"Entrer le nombre dingredient\n";
+    cin >> recette[i].nbri ;
+    for (int j=0 ; j<(recette[i].nbri); j++){
+        cout << "Entrer le nom de  ingriedients"<< j+1 <<" \n";
+        cin >> recette[i].ingredient[j] ;
+        }
+	}
+
+	else if(option==3){//les etapes
+	cout <<" \n entrer le nombre d'etapes\n";
+    cin >> recette[i].nbre;
+    for (int j= 0 ; j <(recette[i].nbre) ; j++){            
+	cout << "entrer l'etape  "<< j+1 <<" \n";
+    cin >> recette[i].etape[j] ;
+	}
+ //import_recette_a_file(recette,i);
+    }
+}
+//void import_file_to_recette(struct Recettes recette[100],int i){}	
+#endif
+
+/*
+LeLivre << i+1 <<") "<<recette.etape[i] <<","
+LeLivre << "/ Etapes : ";
+ LeLivre << recette.ingredient[i]<< ", " ;
+LeLivre <<"Ingredients : ";  
+ LeLivre <<"Recette :\n"<<recette.nom <<"/ "; 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -12,6 +149,7 @@
 // Paramètres :
 //-------------------------
 // *****************************************************************************
+/*
 void menu (){
     std::cout<<"=== === LIVRE DE RECETTES === === \n";
     std :: cout <<static_cast<char>(ChoixMenu::ajouter)<<" --> ajouter\n";
@@ -25,7 +163,7 @@ void menu (){
         choix = static_cast <enum ChoixMenu>(choixdefine);
     }
 }
-
+*/
 
 // *****************************************************************************
 // Nom : ajouter
@@ -33,7 +171,7 @@ void menu (){
 // Paramètres :
 //-------------------------
 // *****************************************************************************
-void ajouter(recettes Recettes)
+/*void ajouter(recettes Recettes)
 {
 	int i;
 	int n=0;
@@ -51,55 +189,4 @@ void ajouter(recettes Recettes)
 		std::cin>>Recettes.aux.etapes[Recettes.count][i];
 	}
 }
-
-
-// *****************************************************************************
-// Nom : rechercher_nom
-// Description : recherche un recette a partir de son nom 
-// Paramètres :
-//-------------------------
-// *****************************************************************************
-void rechercher_nom(){
-    
-}
-
-
-// *****************************************************************************
-// Nom : rechercher_ingredients
-// Description : rechercher une recette a parti de cest ingredients
-// Paramètres :
-//-------------------------
-// *****************************************************************************
-void rechercher_ingredients(){
-
-}
-
-
-// *****************************************************************************
-// Nom : modifier
-// Description : modifi une recette
-// Paramètres :
-//-------------------------
-// *****************************************************************************
-void modifier(){
-
-}
-
-
-// *****************************************************************************
-// Nom : suppprimer
-// Description : supprime une recette
-// Paramètres :
-//-------------------------
-// *****************************************************************************
-void supprimer(){
-
-}
- /*
- 
- fonction pour liste 
-
-
- */
-
-nnnn
+*/

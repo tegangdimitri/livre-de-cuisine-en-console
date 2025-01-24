@@ -1,25 +1,108 @@
-#include "declaration.h"
 
-struct Recettes recette;
+#include <iostream>
+#include <stdio.h>
+//#include "declaration.h"
+#include "header.h" 
+
+
+struct Recettes recette[100];
+int index_recette=0;//pour les recette de 1-100
+string NomRecherche ;
+string line =" ";
+char mot[100];//pour avoir le titre et lingredient au niveau e la recherche
 int main(){
-    fstream LeLivre("cuisine.txt", ios :: out | ios:: in | ios :: app);
-    std :: cout <<"bien venue dans le notre livre se cuisine\n";
-     std ::cout <<"a --> ajouter\n";
+    //fstream LeLivre("cuisine.txt", ios :: out | ios:: in | ios :: app);
+    std::cout<<"\n === === LIVRE DE RECETTES === === \n";
+    std :: cout <<"Bien venue dans le livre de cuisine\n";
+    std ::cout <<"a --> ajouter\n";
     std :: cout <<"r --> rechercher\n";
     std :: cout <<"m --> modifier\n";
     std :: cout <<"s --> suprimer\n";
+    std :: cout <<"af --> afficher\n";
+    std :: cout <<"e --> exits\n";
     char entre ; /*l'emtrer de lutilisateur*/
     cin >> entre ;
-    switch (entre){
-        // *****************************************************************************
-// Nom : ajouter
-// Description : Ajoute une recette 
-// Paramètres : permet a un utilisateur d'ajouter une recette
-//-------------------------
-// *****************************************************************************
-        case 'a':
-        /*ici on rempli l'enregistrement d'une recette*/
-        if (LeLivre.is_open()){
+    switch(entre){
+
+        case ('a'|'A'):{
+        ajouter_recette(recette,index_recette);
+        index_recette++;
+        break;
+        };
+
+        case ('r'):{
+            std::cout<<"vous avez choisir l'option rechercher .\n";
+            std::cout<<"vous voulez rechercher par noms(1) ou par ingredients(0)\n ";
+            int option;
+            std::cin>>option;
+            if(option==1){
+                 std::cout<<"enter nom de la recherche :";
+                std::cin>>mot;
+
+            }
+            else if(option==0){
+                std::cout<<"enter lingredient :";
+                std::cin>>mot; 
+               rechercher_par_ind(recette,index_recette,mot);
+
+            }
+            else{
+                std::cout<<"erreur d'entre \n";
+            }
+
+        }
+        
+        case ('m'):{
+            std::cout<<"vous voulez modifier  1. le Titre \n2. les ingredient \n3. les etapes\n";
+            modifier_recette(recette);
+            break;
+
+
+        }
+    
+
+    }
+    return 0; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ici on rempli l'enregistrement d'une recette*/
+/*
+ if (LeLivre.is_open()){
                 cout <<"Entrer le nom de la recette \n ";
                 cin >> recette.nom ;
                 LeLivre <<"Recette :\n"<<recette.nom <<"/ "; 
@@ -46,35 +129,4 @@ int main(){
                 LeLivre <<"\n";
             }
             break ;
-            // *****************************************************************************
-// Nom : rechercher_nom
-// Description : recherche un recette a partir de son nom si elle existe un message est afficher a l'utilisateur
-// Paramètres : l'utilisateur entre le non de la reccete qu'il recherche
-//-------------------------
-// *****************************************************************************
-        case 'r':
-            cout <<"entrer le nom de la recette\n";
-            string NomRecherche ;
-            cin >> NomRecherche ;
-            string line ="";
-            int i=0 ;
-            int j;
-            while( getline(LeLivre , line)){
-                if(line ==  NomRecherche ){
-                    cout << "la recette chercher existe\n"<<i;
-                    string affiche="";
-                    getline(LeLivre , line) >> affiche ;
-                    cout << affiche ;
-                }
-                i=i+1 ;
-            }
-        case 'm':
-            cout << "entrer la ligne a modifier"
-            int l ;
-            
-
-
-
-    }
-    return 0; 
-}
+            */
