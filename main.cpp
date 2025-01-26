@@ -3,6 +3,7 @@
 struct Recettes recette;
 int main(){
     fstream LeLivre("cuisine.txt", ios :: out | ios:: in | ios :: app);
+    fstream livre("affichage.txt" , ios :: out | ios :: in | ios :: app); // elle vas permetre l'affichage du livre 
     std :: cout <<"bien venue dans le notre livre se cuisine\n";
      std ::cout <<"a --> ajouter\n";
     std :: cout <<"r --> rechercher\n";
@@ -22,28 +23,33 @@ int main(){
         if (LeLivre.is_open()){
                 cout <<"Entrer le nom de la recette \n ";
                 cin >> recette.nom ;
-                LeLivre <<"Recette :\n"<<recette.nom <<"/ "; 
-
+                LeLivre <<"{\n";
+                LeLivre <<"  Recette : {\n   nom : "<<recette.nom <<"\n "; 
+                livre << recette.nom << "\n";
                 cout <<" entrer le nombre dingredient\n";
                 int nbri ; //nombre d'ingredient
                 cin >> nbri ;
-                LeLivre <<"Ingredients : ";   
+                LeLivre <<"  Ingredients : [\n ";   
                 for (int i=0 ; i< nbri; i++){
                     cout << "entrer le nom de l'ingredient en position "<< i+1 <<" \n";
                     cin >> recette.ingredient[i] ;
-                    LeLivre << recette.ingredient[i]<< ", " ;
+                    LeLivre <<"   {\n      "<< recette.ingredient[i]<< "\n  }\n " ;
+                    livre << recette.ingredient[i] <<"\n" ;
 
                 }
-                LeLivre << "/ Etapes : ";
+                LeLivre <<"]\n ";
+                LeLivre << "  Etapes : [\n";
                 cout <<" \n entrer le nombre d'etapes\n";
                 int nbre ; // nombre d'etape 
                 cin >> nbre;
                 for (int i = 0 ; i < nbre ; i++){
-                    cout << "entrer l'etape en position "<< i <<" \n";
+                    cout << "entrer l'etape en position "<< i <<"\n";
                     cin >> recette.etape[i] ;
-                    LeLivre << i+1 <<") "<<recette.etape[i] <<",";
+                    LeLivre  <<"   {\n    "<<recette.etape[i] <<"\n   }\n";
+                    livre << recette.etape <<"\n";
+                    livre<< "/";
                 }
-                LeLivre <<"\n";
+                LeLivre <<"]\n";
             }
             break ;
             // *****************************************************************************
@@ -57,24 +63,30 @@ int main(){
             string NomRecherche ;
             cin >> NomRecherche ;
             string line ="";
-            int i=0 ;
-            int j;
-            while( getline(LeLivre , line)){
-                if(line ==  NomRecherche ){
+            int i=0 ; 
+            while( getline(livre , line  )){
+                if(line ==  NomRecherche  ){
                     cout << "la recette chercher existe\n"<<i;
                     string affiche="";
-                    getline(LeLivre , line) >> affiche ;
-                    cout << affiche ;
+                    cout<<line<<endl;
+                    break;
+                    
+                    
                 }
+                std::string name{" "};
+                    livre >>name;
+                    cout << name;
                 i=i+1 ;
             }
-        case 'm':
-            cout << "entrer la ligne a modifier"
-            int l ;
+        
+        string affiche;
             
+       while(getline(LeLivre , line)){
+        getline(LeLivre , line) >> affiche ;
+       }     
 
 
 
     }
     return 0; 
-}
+}       
