@@ -1,8 +1,8 @@
-#include<iostream>
-#include <fstream>
-#include "donnee.h"
+#include "declaration.h"
 
-void menu ();
-void ajouter(recettes Recettes);
-void rechercher_ingredients();
-void rechercher_nom();
+void ajouter_recette(struct Recettes recette[100],int i);
+void import_recette_a_file(struct Recettes recette[100],int i);
+void rechercher_par_ind(struct Recettes recette[100],int i,char m[100]);
+void modifier_recette(struct Recettes recette[100]);
+/*void menu ();
+void rechercher_ingredients();*/

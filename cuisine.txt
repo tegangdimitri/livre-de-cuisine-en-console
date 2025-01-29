@@ -14,6 +14,7 @@ Recette :
 tomate
 / Ingredients : au, jour, hui, / Etapes : 1) lave,2) melange,
 Recette :
+<<<<<<< HEAD
 biscuit/ Ingredients : farine, sucre, levure, lait, eau, / Etapes : 1) melange,2) tourner,3) les,
 Recette :
 biscuit / Ingredients : lait, farine, sucre, levure, huile, / Etapes : 1) melange,2) tourner,3) ecraser,
@@ -520,3 +521,6 @@ p
     s
    }
 ]
+=======
+gateaux/ Ingredients : / Etapes : 
+>>>>>>> 5dea22e61e0cc6f9a5dc48a9b4c8f150d67df819
