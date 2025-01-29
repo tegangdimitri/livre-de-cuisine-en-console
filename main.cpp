@@ -99,11 +99,7 @@ int main(){
     }
     return 0; 
 }       
-=======
-        case 'r':{
 
-            break;
-        }
 // *****************************************************************************
 // Nom : modifier recette
 // Description : modifi un recette a partir de son nom si elle existe un message est afficher a l'utilisateur
