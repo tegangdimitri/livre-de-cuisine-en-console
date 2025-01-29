@@ -13,3 +13,510 @@ tomate/ Ingredients : riz, sauce, / Etapes : 1) melange,
 Recette :
 tomate
 / Ingredients : au, jour, hui, / Etapes : 1) lave,2) melange,
+Recette :
+biscuit/ Ingredients : farine, sucre, levure, lait, eau, / Etapes : 1) melange,2) tourner,3) les,
+Recette :
+biscuit / Ingredients : lait, farine, sucre, levure, huile, / Etapes : 1) melange,2) tourner,3) ecraser,
+Recette :
+macabo / Ingredients : macabo, tomate, huil, / Etapes : 1) laver,2) prepare,
+Recette :
+gatau / Ingredients : farine, sucre, / Etapes : 1) melande,2) cuison,
+{
+Recette : {
+nom :arachide
+ Ingredients : [ { eau} { tomate} ]
+ Etapes : [1{ preparer}
+{
+  Recette : {
+nom : rou
+    Ingredients : [ {
+hil
+}
+ {
+bon
+}
+ ]
+    Etapes : [1{
+g
+}
+2{
+t
+}
+3{
+p
+}
+
+{
+  Recette : {
+   nom : bon
+   Ingredients : [ {
+   b
+}
+ {
+   o
+}
+ {
+   n
+}
+ ]
+   Etapes : [
+1   {
+1
+}
+2   {
+2
+}
+3   {
+3
+}
+]
+{
+  Recette : {
+   nom : vien
+   Ingredients : [    {
+   v
+}
+    {
+   i
+}
+    {
+   e
+}
+    {
+   n
+}
+ ]
+   Etapes : [
+1   {
+  1
+}
+2   {
+  2
+}
+3   {
+  3
+}
+4   {
+  4
+}
+]
+{
+  Recette : {
+   nom : tuojnnfm
+   Ingredients : [    {
+   jjsbjkb
+}
+    {
+   bjshbjjk
+}
+    {
+   bbjvhjb
+}
+    {
+   bdhbsdb
+}
+ ]
+   Etapes : [
+   {
+  bhjfshvsdb
+   }
+   {
+  dhbhbkbf
+   }
+   {
+  jbdbhjbvsgd
+   }
+]
+{
+  Recette : {
+   nom : bon
+   Ingredients : [
+    {
+   jjjbhf
+}
+    {
+   hbbvhbd
+}
+    {
+   vhbhb
+}
+ ]
+   Etapes : [
+   {
+  jbbhjnvjhbh
+   }
+   {
+  bhvgdvb
+   }
+]
+{
+  Recette : {
+   nom : a
+   Ingredients : [
+ ]
+   Etapes : [
+]
+{
+  Recette : {
+   nom : jfbhbhjb
+   Ingredients : [
+    {
+      nbdhbjdvs
+   }
+    {
+      fbgvsgcfhgcs
+   }
+    {
+      gdcffsfgg
+   }
+    {
+      dgcdf
+   }
+ ]
+   Etapes : [
+   {
+    vdghch
+   }
+   {
+    vdgvgdgj
+   }
+]
+{
+  Recette : {
+   nom : hfbdh
+   Ingredients : [
+ ]
+   Etapes : [
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    
+   }
+   {
+    {
+  Recette : {
+   nom : biscuit
+   Ingredients : [
+    {
+      tomate
+  }
+    {
+      uug
+  }
+    {
+      fvhsd
+  }
+    {
+      vcsjhb
+  }
+ ]
+   Etapes : [
+   {
+    bdv
+   }
+   {
+    jdbf
+   }
+]
+{
+  Recette : {
+   nom : tomate
+   Ingredients : [
+    {
+      s
+  }
+ ]
+   Etapes : [
+   {
+    s
+   }
+]
