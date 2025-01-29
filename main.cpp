@@ -67,10 +67,9 @@ int main(){
             while( getline(livre , line  )){
                 if(line ==  NomRecherche  ){
                     cout << "la recette chercher existe\n"<<i;
-                    string affiche="";
-                    cout<<line<<endl;
-                    break;
-                    
+                    i ;
+                    //livre>>affiche;
+                    //getline(livre , line) >> affiche ;
                     
                 }
                 std::string name{" "};
@@ -78,9 +77,12 @@ int main(){
                     cout << name;
                 i=i+1 ;
             }
+
         
         string affiche;
-            
+            char r;
+            int l ;
+            getline(r, i , '/');
        while(getline(LeLivre , line)){
         getline(LeLivre , line) >> affiche ;
        }     
