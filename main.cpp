@@ -35,10 +35,6 @@ int main(){
                     cin >> recette.ingredient[i] ;
                     LeLivre <<"   {\n      "<< recette.ingredient[i]<< "\n  }\n " ;
                     livre << recette.ingredient[i] <<"\n" ;
-<<<<<<< HEAD
-
-=======
->>>>>>> 5dea22e61e0cc6f9a5dc48a9b4c8f150d67df819
                 }
                 LeLivre <<"]\n ";
                 LeLivre << "  Etapes : [\n";
@@ -50,10 +46,6 @@ int main(){
                     cin >> recette.etape[i] ;
                     LeLivre  <<"   {\n    "<<recette.etape[i] <<"\n   }\n";
                     livre << recette.etape <<"\n";
-<<<<<<< HEAD
-                    livre<< "/";
-=======
->>>>>>> 5dea22e61e0cc6f9a5dc48a9b4c8f150d67df819
                 }
                 LeLivre <<"]\n";
             }
@@ -64,42 +56,10 @@ int main(){
 // Paramètres : l'utilisateur entre le non de la reccete qu'il recherche
 //-------------------------
 // *****************************************************************************
-<<<<<<< HEAD
-        case 'r':
-            cout <<"entrer le nom de la recette\n";
-            string NomRecherche ;
-            cin >> NomRecherche ;
-            string line ="";
-            int i=0 ; 
-            while( getline(livre , line  )){
-                if(line ==  NomRecherche  ){
-                    cout << "la recette chercher existe\n"<<i;
-                    i ;
-                    //livre>>affiche;
-                    //getline(livre , line) >> affiche ;
-                    
-                }
-                std::string name{" "};
-                    livre >>name;
-                    cout << name;
-                i=i+1 ;
-            }
+        case 'r':{
 
-        
-        string affiche;
-            char r;
-            int l ;
-            getline(r, i , '/');
-       while(getline(LeLivre , line)){
-        getline(LeLivre , line) >> affiche ;
-       }     
-
-
-
-    }
-    return 0; 
-}       
-
+            break;
+        }
 // *****************************************************************************
 // Nom : modifier recette
 // Description : modifi un recette a partir de son nom si elle existe un message est afficher a l'utilisateur
@@ -162,4 +122,3 @@ int main(){
 }
 
     
->>>>>>> 5dea22e61e0cc6f9a5dc48a9b4c8f150d67df819
